@@ -4,7 +4,7 @@
 
 - STATE
 
-  - Manage App state using Redux
+  - ~~Manage App state using Redux~~
     - ~~Figure out how to make async operation in reducer~~
     - ~~Add redux thunk to project(middleware for async operations in redux actions)~~
 
@@ -24,11 +24,11 @@
 
   - ~~create composer grid~~
   - ~~create composer card~~
-  - implement searchBar
+  - ~~implement searchBar~~
   - implement favorite composers (probably gonna use localStorage because there are no POST request ;( )
 
 - UI
 
   - ~~style cards~~
   - ~~style grid~~
-  - style main page
+  - ~~style main page~~
