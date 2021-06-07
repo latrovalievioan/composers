@@ -22,12 +22,14 @@ function App() {
         placeholder="Find a Composer"
         className="search-bar"
       />
-      <nav>
-        <button onClick={() => dispatch(essentials())}>
+      <nav className="buttons">
+        <button onClick={() => dispatch(essentials())} className="nav-button">
           Essential Composers
         </button>
-        <button onClick={() => dispatch(popular())}>Popular Composers</button>
-        <button>Favorite Composers</button>
+        <button onClick={() => dispatch(popular())} className="nav-button">
+          Popular Composers
+        </button>
+        <button className="nav-button">Favorite Composers</button>
       </nav>
 
       <div className="composer-grid">
