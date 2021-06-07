@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .App {
     background: #F2EDD9;
     display: flex;
@@ -19,6 +23,40 @@
     width: 100vw;
 }
 
+.page-title {
+    color: #5a3d2b;
+    font-family: Lobster;
+    font-size: 5rem;
+    margin-top: 5rem;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    width: 57%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #5A3D2B;
+    border: none;
+    width: 13rem;
+    margin: 1rem;
+    height: 3rem;
+    color: #FBD266;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+button:hover {
+    color: #F2EDD9;
+}
+
 .composer-grid {
     display:grid;
     grid-template-columns: repeat(auto-fit, 23rem);
@@ -26,3 +64,4 @@
     gap: 2rem;
     width: 100%;
 }
+
