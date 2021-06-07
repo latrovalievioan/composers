@@ -5,6 +5,7 @@
 - STATE
 
   - Manage App state using Redux
+    - Figure out how to make async operation in reducer
 
 - TYPES
 
