@@ -1,16 +1,15 @@
 import { PayloadAction } from '@reduxjs/toolkit';
-import { getEssentialComposers } from '../../api';
 
 export const composerListReducer = (state = [], action: PayloadAction) => {
   switch (action.type) {
     case 'ESSENTIALS':
-      return getEssentialComposers().then((data) => data);
+      return action.payload;
 
     case 'POPULAR':
-      return state;
+      return action.payload;
 
     case 'SEARCH':
-      return state;
+      return action.payload;
 
     default:
       return state;
