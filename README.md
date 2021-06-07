@@ -5,8 +5,8 @@
 - STATE
 
   - Manage App state using Redux
-    ~~- Figure out how to make async operation in reducer~~
-    - Add redux thunk to project(middleware for async operations in redux actions)
+    - ~~Figure out how to make async operation in reducer~~
+    - ~~Add redux thunk to project(middleware for async operations in redux actions)~~
 
 - TYPES
 
