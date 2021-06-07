@@ -25,7 +25,7 @@
   - ~~create composer grid~~
   - ~~create composer card~~
   - ~~implement searchBar~~
-  - implement favorite composers (probably gonna use localStorage because there are no POST request ;( )
+  - implement favorite composers (probably gonna use localStorage because there are no POST requests ;( )
 
 - UI
 

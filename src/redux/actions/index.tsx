@@ -46,3 +46,10 @@ export const nameSearch =
       });
     }
   };
+
+export const favorites = (): any => async (dispatch: AppDispatch) => {
+  dispatch({
+    type: 'FAVORITES',
+    payload: JSON.parse(localStorage.getItem('composers') || '[]'),
+  });
+};

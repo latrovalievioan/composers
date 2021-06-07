@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/App.css';
-import { essentials, popular, nameSearch } from './redux/actions';
+import { essentials, popular, nameSearch, favorites } from './redux/actions';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { Composer } from './types';
 import { ComposerCard } from './components/ComposerCard';
@@ -29,7 +29,9 @@ function App() {
         <button onClick={() => dispatch(popular())} className="nav-button">
           Popular Composers
         </button>
-        <button className="nav-button">Favorite Composers</button>
+        <button onClick={() => dispatch(favorites())} className="nav-button">
+          Favorite Composers
+        </button>
       </nav>
 
       <div className="composer-grid">

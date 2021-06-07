@@ -16,6 +16,9 @@ export const composerListReducer = (
     case 'SEARCH':
       return action.payload;
 
+    case 'FAVORITES':
+      return action.payload;
+
     default:
       return state;
   }
