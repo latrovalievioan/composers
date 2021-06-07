@@ -1,0 +1,56 @@
+.composer-card {
+    display: flex;
+    position: relative;
+    background: var(--orange);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.composer-card > img {
+    object-fit: fill;
+}
+
+
+.composer-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--light);
+    padding: 1rem;
+}
+
+h3 {
+    margin-bottom: auto;
+    margin-top: 0.5rem;
+}
+
+.image-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    background: #0000007a;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-overlay:hover {
+    opacity: 1;
+}
+
+.plus-icon {
+    cursor:pointer;
+    margin-bottom: 0.4rem;
+}
+
+.plus-icon:hover {
+    color: var(--orange);
+}
+
+p {
+    cursor: context-menu;
+}

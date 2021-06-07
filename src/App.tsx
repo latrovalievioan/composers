@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import { essentials, popular } from './redux/actions';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { Composer } from './types';

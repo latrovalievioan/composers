@@ -1,0 +1,28 @@
+:root {
+    --light: #F2EDD9;
+    --brown: #5a3d2b; 
+    --orange: #D76735;
+    --yellow: #FBD266;
+}
+:root * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background: #F2EDD9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.composer-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 23rem);
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
