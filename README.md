@@ -1,4 +1,4 @@
-# Use yarn start to start run the project!
+# Use yarn start to run the project!
 
 # TODOS:
 
@@ -11,6 +11,7 @@
 - TYPES
 
   - create types for api response
+  - ~~create composer type~~
 
 - api
 
@@ -21,8 +22,10 @@
 
 - app
 
-  - create composer grid
-  - create composer card
+  - ~~create composer grid~~
+  - ~~create composer card~~
+  - implement searchBar
+  - implement favorite composers (probably gonna use localStorage because there are no POST request ;( )
 
 - UI
 
