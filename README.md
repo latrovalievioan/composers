@@ -29,6 +29,6 @@
 
 - UI
 
-  - style cards
-  - style grid
+  - ~~style cards~~
+  - ~~style grid~~
   - style main page
