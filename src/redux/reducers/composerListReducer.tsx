@@ -1,6 +1,11 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
-export const composerListReducer = (state = [], action: PayloadAction) => {
+const initialState: object[] = [];
+
+export const composerListReducer = (
+  state = initialState,
+  action: PayloadAction
+): any => {
   switch (action.type) {
     case 'ESSENTIALS':
       return action.payload;
