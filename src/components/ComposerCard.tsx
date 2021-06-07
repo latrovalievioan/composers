@@ -19,7 +19,7 @@ export const ComposerCard = ({
         <p>Add to Favorites</p>
       </div>
       <div className="composer-info">
-        <h3>{composer.complete_name}</h3>
+        <h3 className="composer-title">{composer.complete_name}</h3>
         <span>Birth: {composer.birth}</span>
         <span>Death: {composer.death || 'still alive'}</span>
         <span>Epoch: {composer.epoch}</span>
