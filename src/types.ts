@@ -1,4 +1,4 @@
-export type Composer = {
+export type Composer = Readonly<{
   id: string;
   name: string;
   complete_name: string;
@@ -6,4 +6,4 @@ export type Composer = {
   death: string;
   epoch: string;
   portrait: string;
-};
+}>;
