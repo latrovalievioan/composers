@@ -11,11 +11,6 @@ export const FavoriteComposers = () => {
     const favoriteComposers = Array.from(favoriteComposersIds, (id: string) =>
       allComposers.find((c) => c.id === id)
     ).filter((c) => c !== undefined) as Composer[];
-    console.log({
-      allComposers,
-      favoriteComposersIds,
-      favoriteComposers,
-    });
     return favoriteComposers;
   });
   return <ComposersGrid composers={favorites} />;
