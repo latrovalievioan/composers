@@ -33,5 +33,5 @@
 - UI
 
   - style cards
-  - ~~style grid~~
-  - ~~style main page~~
+  - style grid
+  - style main page
