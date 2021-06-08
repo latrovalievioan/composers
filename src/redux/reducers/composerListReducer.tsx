@@ -8,14 +8,8 @@ export const composerListReducer = (
 ): any => {
   switch (action.type) {
     case 'ESSENTIALS':
-      return action.payload;
-
     case 'POPULAR':
-      return action.payload;
-
     case 'SEARCH':
-      return action.payload;
-
     case 'FAVORITES':
       return action.payload;
 
