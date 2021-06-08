@@ -7,8 +7,8 @@ const initialState = {
 
 export const composerListReducer = (
   state = initialState,
-  action: PayloadAction
-): any => {
+  action: PayloadAction<readonly Composer[]>
+) => {
   switch (action.type) {
     case 'SET_ESSENTIAL_COMPOSERS':
       return {
