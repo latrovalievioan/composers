@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import { Composer } from '../types';
@@ -15,6 +15,8 @@ export const CardOverlay = ({
     return storageComposers.some((comp: Composer) => comp.id === composer.id);
   };
 
+  const [state, setState] = useState(isFavorite());
+
   const addToFavorites = () => {
     const storageComposers = JSON.parse(
       localStorage.getItem('composers') || '[]'
@@ -22,6 +24,7 @@ export const CardOverlay = ({
     if (isFavorite()) return;
     storageComposers.push(composer);
     localStorage.setItem('composers', JSON.stringify(storageComposers));
+    setState(isFavorite());
   };
 
   const removeFromFavorites = () => {
@@ -33,10 +36,11 @@ export const CardOverlay = ({
       (comp: Composer) => comp.id !== composer.id
     );
     localStorage.setItem('composers', JSON.stringify(filteredComposers));
+    setState(isFavorite());
   };
 
   const getSign = () => {
-    return isFavorite() ? (
+    return state ? (
       <>
         {' '}
         <span className="plus-icon" onClick={() => removeFromFavorites()}>
