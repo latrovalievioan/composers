@@ -4,6 +4,7 @@ import { essentials, popular, nameSearch, favorites } from './redux/actions';
 import { useAppDispatch } from './hooks';
 import { ComposersGrid } from './components/ComposersGrid';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { EssentialComposers } from './components/EssentialComposers';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -30,7 +31,7 @@ function App() {
         </nav>
         <Switch>
           <Route path="/essentials">
-            <ComposersGrid />
+            <EssentialComposers />
           </Route>
           <Route path="/popular">
             <ComposersGrid />
