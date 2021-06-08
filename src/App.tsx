@@ -1,13 +1,11 @@
 import React from 'react';
 import './styles/App.css';
 import { essentials, popular, nameSearch, favorites } from './redux/actions';
-import { useAppDispatch, useAppSelector } from './hooks';
-import { Composer } from './types';
-import { ComposerCard } from './components/ComposerCard';
+import { useAppDispatch } from './hooks';
+import { ComposersGrid } from './components/ComposersGrid';
 
 function App() {
   const dispatch = useAppDispatch();
-  const composerList = useAppSelector((state) => state.composerList);
   const searchBar = React.useRef<HTMLInputElement>(null);
 
   return (
@@ -34,11 +32,7 @@ function App() {
         </button>
       </nav>
 
-      <div className="composer-grid">
-        {composerList.map((composer: Composer) => {
-          return <ComposerCard key={composer.id} composer={composer} />;
-        })}
-      </div>
+      <ComposersGrid />
     </div>
   );
 }

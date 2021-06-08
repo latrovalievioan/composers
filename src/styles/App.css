@@ -58,14 +58,6 @@ html {
     color: var(--light);
 }
 
-.composer-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, 23rem);
-    justify-content: center;
-    gap: 2rem;
-    width: 100vw;
-}
-
 .search-bar {
     width: 36vw;
     background: var(--brown);
