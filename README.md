@@ -26,9 +26,10 @@
   - ~~create composer card~~
   - ~~implement searchBar~~
   - ~~implement favorite composers (probably gonna use localStorage because there are no POST requests ;( )~~
+  - Add loading when composers are loading.
 
 - UI
 
-  - ~~style cards~~
+  - style cards
   - ~~style grid~~
   - ~~style main page~~
