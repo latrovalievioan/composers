@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/App.css';
+import './App.css';
 import { essentials, popular, nameSearch, favorites } from './redux/actions';
 import { useAppDispatch } from './hooks';
 import { ComposersGrid } from './components/ComposersGrid';
@@ -31,7 +31,6 @@ function App() {
           Favorite Composers
         </button>
       </nav>
-
       <ComposersGrid />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Composer } from '../types';
-import '../styles/ComposerCard.css';
+import './ComposerCard.css';
 import { CardOverlay } from './CardOverlay';
 
 export const ComposerCard = ({
