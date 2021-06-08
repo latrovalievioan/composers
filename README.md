@@ -10,7 +10,7 @@
 
 - TYPES
 
-  - create types for api response
+  - ~~create types for api response~~
   - ~~create composer type~~
 
 - api
@@ -31,9 +31,9 @@
   - ~~Use local state for plus/minus sign on card.~~
   - ~~create new state for favorite composers~~
     - ~~add new reducer with "add to favorites" and "remove from favorites" actions~~
-  - add react router to project
-    - create a component for each display
-  - change implementation of card overlay component.
+  - ~~add react router to project~~
+    - ~~create a component for each display~~
+  - ~~change implementation of card overlay component.~~
 
 - UI
 
