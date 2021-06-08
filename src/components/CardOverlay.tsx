@@ -2,12 +2,24 @@ import { ReactElement, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import { Composer } from '../types';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { favorites } from '../redux/actions/';
 
 export const CardOverlay = ({
   composer,
 }: {
   composer: Composer;
 }): ReactElement => {
+  const dispatch = useAppDispatch();
+  const currentState = useAppSelector((state) => state.composerList);
+
+  const stateIsFavorites = (): boolean => {
+    const storageComposers = JSON.parse(
+      localStorage.getItem('composers') || '[]'
+    );
+    return storageComposers.join('') === currentState.join('');
+  };
+
   const isFavorite = (): boolean => {
     const storageComposers = JSON.parse(
       localStorage.getItem('composers') || '[]'
@@ -28,6 +40,7 @@ export const CardOverlay = ({
   };
 
   const removeFromFavorites = () => {
+    const favoritesState = stateIsFavorites();
     const storageComposers = JSON.parse(
       localStorage.getItem('composers') || '[]'
     );
@@ -37,6 +50,9 @@ export const CardOverlay = ({
     );
     localStorage.setItem('composers', JSON.stringify(filteredComposers));
     setState(isFavorite());
+    if (favoritesState) {
+      dispatch(favorites());
+    }
   };
 
   const getSign = () => {
