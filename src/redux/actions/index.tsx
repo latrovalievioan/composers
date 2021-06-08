@@ -53,3 +53,17 @@ export const favorites = (): any => async (dispatch: AppDispatch) => {
     payload: JSON.parse(localStorage.getItem('composers') || '[]'),
   });
 };
+
+export const addToFavorites = (composerId: string) => {
+  return {
+    type: 'ADD_TO_FAVORITES',
+    payload: composerId,
+  };
+};
+
+export const removeFromFavorites = (composerId: string) => {
+  return {
+    type: 'REMOVE_FROM_FAVORITES',
+    payload: composerId,
+  };
+};
