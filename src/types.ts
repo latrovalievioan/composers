@@ -1,5 +1,5 @@
 export type Composer = {
-  id: number;
+  id: string;
   name: string;
   complete_name: string;
   birth: string;
