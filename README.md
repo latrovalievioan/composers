@@ -26,7 +26,7 @@
   - ~~create composer card~~
   - ~~implement searchBar~~
   - ~~implement favorite composers (probably gonna use localStorage because there are no POST requests ;( )~~
-  - figure out how to rerender the grid component on localstorage change
+  - ~~figure out how to rerender the grid component on localstorage change~~ // did it kinda hacky - needs fixing;
   - Add loading when composers are loading.
   - ~~Use local state for plus/minus sign on card.~~
 
