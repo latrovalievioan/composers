@@ -6,7 +6,7 @@ import {
 
 import { AppDispatch } from '../store';
 
-export const essentials = (): any => async (dispatch: AppDispatch) => {
+export const essentials = () => async (dispatch: AppDispatch) => {
   const composers = await getEssentialComposers();
   dispatch({
     type: 'SET_ESSENTIAL_COMPOSERS',
@@ -14,7 +14,7 @@ export const essentials = (): any => async (dispatch: AppDispatch) => {
   });
 };
 
-export const popular = (): any => async (dispatch: AppDispatch) => {
+export const popular = () => async (dispatch: AppDispatch) => {
   const composers = await getPopularComposers();
   dispatch({
     type: 'SET_POPULAR_COMPOSERS',
@@ -22,20 +22,18 @@ export const popular = (): any => async (dispatch: AppDispatch) => {
   });
 };
 
-export const nameSearch =
-  (text: string): any =>
-  async (dispatch: AppDispatch) => {
-    const composers = await searchComposer(text);
+export const nameSearch = (text: string) => async (dispatch: AppDispatch) => {
+  const composers = await searchComposer(text);
 
-    if (typeof composers !== 'string') {
-      dispatch({
-        type: 'SEARCH',
-        payload: composers,
-      });
-    }
-  };
+  if (typeof composers !== 'string') {
+    dispatch({
+      type: 'SEARCH',
+      payload: composers,
+    });
+  }
+};
 
-export const favorites = (): any => async (dispatch: AppDispatch) => {
+export const favorites = () => async (dispatch: AppDispatch) => {
   dispatch({
     type: 'FAVORITES',
     payload: JSON.parse(localStorage.getItem('composers') || '[]'),

@@ -5,7 +5,7 @@ import './ComposersGrid.css';
 export const ComposersGrid = ({
   composers = [],
 }: {
-  composers?: Composer[];
+  composers?: readonly Composer[];
 }) => {
   return (
     <div className="composer-grid">
