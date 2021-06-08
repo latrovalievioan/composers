@@ -1,13 +1,15 @@
 import { Composer } from '../types';
-import { useAppSelector } from '../hooks';
 import { ComposerCard } from './ComposerCard';
 import './ComposersGrid.css';
 
-export const ComposersGrid = () => {
-  const composerList = useAppSelector((state) => state.composerList);
+export const ComposersGrid = ({
+  composers = [],
+}: {
+  composers?: Composer[];
+}) => {
   return (
     <div className="composer-grid">
-      {composerList.map((composer: Composer) => {
+      {composers.map((composer: Composer) => {
         return <ComposerCard key={composer.id} composer={composer} />;
       })}
     </div>
