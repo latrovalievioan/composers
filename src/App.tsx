@@ -6,6 +6,7 @@ import { ComposersGrid } from './components/ComposersGrid';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { EssentialComposers } from './components/EssentialComposers';
 import { PopularComposers } from './components/PopularComposers';
+import { FavoriteComposers } from './components/FavoriteComposers';
 function App() {
   const dispatch = useAppDispatch();
   const searchBar = React.useRef<HTMLInputElement>(null);
@@ -37,7 +38,7 @@ function App() {
             <PopularComposers />
           </Route>
           <Route path="/favorites">
-            <ComposersGrid />
+            <FavoriteComposers />
           </Route>
         </Switch>
       </div>

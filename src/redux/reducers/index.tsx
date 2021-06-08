@@ -4,5 +4,5 @@ import { favoriteComposersReducer } from './favoriteComposersReducer';
 
 export const rootReducer = combineReducers({
   composerList: composerListReducer,
-  favoriteComposers: favoriteComposersReducer,
+  favoriteComposersIds: favoriteComposersReducer,
 });

@@ -1,61 +1,29 @@
-import { ReactElement, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import { Composer } from '../types';
 import { useAppDispatch, useAppSelector } from '../hooks';
-import { favorites } from '../redux/actions/';
+import { addToFavorites, removeFromFavorites } from '../redux/actions/';
 
 export const CardOverlay = ({ composer }: { composer: Composer }) => {
   const dispatch = useAppDispatch();
-  const currentState = useAppSelector((state) => state.composerList);
 
-  const stateIsFavorites = (): boolean => {
-    const storageComposers = JSON.parse(
-      localStorage.getItem('composers') || '[]'
-    );
-    return storageComposers.join('') === currentState.join('');
+  const isFavorite = useAppSelector((state) =>
+    state.favoriteComposersIds.has(composer.id)
+  );
+
+  const onAddComposer = () => {
+    dispatch(addToFavorites(composer.id));
   };
 
-  const isFavorite = (): boolean => {
-    const storageComposers = JSON.parse(
-      localStorage.getItem('composers') || '[]'
-    );
-    return storageComposers.some((comp: Composer) => comp.id === composer.id);
-  };
-
-  const [state, setState] = useState(isFavorite());
-
-  const addToFavorites = () => {
-    const storageComposers = JSON.parse(
-      localStorage.getItem('composers') || '[]'
-    );
-    if (isFavorite()) return;
-    storageComposers.push(composer);
-    localStorage.setItem('composers', JSON.stringify(storageComposers));
-    setState(isFavorite());
-  };
-
-  const removeFromFavorites = () => {
-    const favoritesState = stateIsFavorites();
-    const storageComposers = JSON.parse(
-      localStorage.getItem('composers') || '[]'
-    );
-    if (!isFavorite()) return;
-    const filteredComposers = storageComposers.filter(
-      (comp: Composer) => comp.id !== composer.id
-    );
-    localStorage.setItem('composers', JSON.stringify(filteredComposers));
-    setState(isFavorite());
-    if (favoritesState) {
-      dispatch(favorites());
-    }
+  const onRemoveComposer = () => {
+    dispatch(removeFromFavorites(composer.id));
   };
 
   const getSign = () => {
-    return state ? (
+    return isFavorite ? (
       <>
         {' '}
-        <span className="plus-icon" onClick={() => removeFromFavorites()}>
+        <span className="plus-icon" onClick={onRemoveComposer}>
           <FontAwesomeIcon icon={faMinusCircle} size="3x" />
         </span>
         <p>Remove from Favorites</p>
@@ -63,7 +31,7 @@ export const CardOverlay = ({ composer }: { composer: Composer }) => {
     ) : (
       <>
         {' '}
-        <span className="plus-icon" onClick={() => addToFavorites()}>
+        <span className="plus-icon" onClick={onAddComposer}>
           <FontAwesomeIcon icon={faPlusCircle} size="3x" />
         </span>
         <p>Add to Favorites</p>
