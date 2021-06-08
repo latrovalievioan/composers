@@ -7,29 +7,17 @@ import {
 import { AppDispatch } from '../store';
 
 export const essentials = (): any => async (dispatch: AppDispatch) => {
-  let composers;
-  try {
-    composers = await getEssentialComposers();
-  } catch {
-    composers = 'No Composers Found';
-  }
-
+  const composers = await getEssentialComposers();
   dispatch({
-    type: 'ESSENTIALS',
+    type: 'SET_ESSENTIAL_COMPOSERS',
     payload: composers,
   });
 };
 
 export const popular = (): any => async (dispatch: AppDispatch) => {
-  let composers;
-  try {
-    composers = await getPopularComposers();
-  } catch {
-    composers = 'No Composers Found';
-  }
-
+  const composers = await getPopularComposers();
   dispatch({
-    type: 'POPULAR',
+    type: 'SET_POPULAR_COMPOSERS',
     payload: composers,
   });
 };

@@ -4,7 +4,9 @@ import { useAppSelector, useAppDispatch } from '../hooks';
 import { essentials } from '../redux/actions';
 
 export const EssentialComposers = () => {
-  const composers = useAppSelector((state) => state.composerList);
+  const composers = useAppSelector(
+    (state) => state.composerList.essentialComposers
+  );
 
   const dispatch = useAppDispatch();
   React.useEffect(() => {

@@ -4,7 +4,9 @@ import { useAppSelector, useAppDispatch } from '../hooks';
 import { popular } from '../redux/actions';
 
 export const PopularComposers = () => {
-  const composers = useAppSelector((state) => state.composerList);
+  const composers = useAppSelector(
+    (state) => state.composerList.popularComposers
+  );
 
   const dispatch = useAppDispatch();
   React.useEffect(() => {

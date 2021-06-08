@@ -1,18 +1,25 @@
 import { PayloadAction } from '@reduxjs/toolkit';
-
-const initialState: object[] = [];
+import { Composer } from '../../types';
+const initialState = {
+  essentialComposers: [] as readonly Composer[],
+  popularComposers: [] as readonly Composer[],
+};
 
 export const composerListReducer = (
   state = initialState,
   action: PayloadAction
 ): any => {
   switch (action.type) {
-    case 'ESSENTIALS':
-    case 'POPULAR':
-    case 'SEARCH':
-    case 'FAVORITES':
-      return action.payload;
-
+    case 'SET_ESSENTIAL_COMPOSERS':
+      return {
+        ...state,
+        essentialComposers: action.payload,
+      };
+    case 'SET_POPULAR_COMPOSERS':
+      return {
+        ...state,
+        popularComposers: action.payload,
+      };
     default:
       return state;
   }
