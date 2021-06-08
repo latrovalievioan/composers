@@ -5,11 +5,7 @@ import { Composer } from '../types';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { favorites } from '../redux/actions/';
 
-export const CardOverlay = ({
-  composer,
-}: {
-  composer: Composer;
-}): ReactElement => {
+export const CardOverlay = ({ composer }: { composer: Composer }) => {
   const dispatch = useAppDispatch();
   const currentState = useAppSelector((state) => state.composerList);
 
