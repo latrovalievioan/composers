@@ -1,8 +1,8 @@
 :root {
-    --light: #F2EDD9;
-    --brown: #5a3d2b; 
+    --light: #E2DEDA;
+    --brown: #0C4A61;
     --orange: #D76735;
-    --yellow: #FBD266;
+    --yellow: #ABDFF0;
 }
 :root * {
     margin: 0;

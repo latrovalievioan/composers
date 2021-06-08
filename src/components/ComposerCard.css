@@ -1,10 +1,12 @@
 .composer-card {
     display: flex;
+    width: 18rem;
     position: relative;
     background: var(--orange);
     border-radius: 1rem;
     overflow: hidden;
-    max-height: 200px;
+    flex-direction: column;
+    filter: drop-shadow(0 0 0.75rem var(--brown));
 }
 
 .composer-card > img {
