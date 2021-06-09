@@ -22,16 +22,6 @@ function App() {
       <div className="App">
         <h1 className="page-title">Classical Composers</h1>
         <Nav />
-        <input
-          ref={searchBar}
-          onInput={() => {
-            if (searchBar.current)
-              dispatch(nameSearch(searchBar.current.value));
-          }}
-          type="text"
-          placeholder="Find by Name:"
-          className="search-bar"
-        />
         <Switch>
           <Route path="/essentials">
             <EssentialComposers />
