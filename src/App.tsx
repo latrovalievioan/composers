@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
-import { essentials, popular, nameSearch, favorites } from './redux/actions';
+import {
+  essentials,
+  popular,
+  nameSearch,
+  loadFavoritesFromStorage,
+} from './redux/actions';
 import { useAppDispatch } from './hooks';
 import { ComposersGrid } from './components/ComposersGrid';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
@@ -10,6 +15,11 @@ import { FavoriteComposers } from './components/FavoriteComposers';
 function App() {
   const dispatch = useAppDispatch();
   const searchBar = React.useRef<HTMLInputElement>(null);
+  React.useEffect(() => {
+    dispatch(essentials());
+    dispatch(popular());
+    dispatch(loadFavoritesFromStorage());
+  }, []);
 
   return (
     <Router>

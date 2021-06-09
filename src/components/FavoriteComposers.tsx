@@ -10,11 +10,6 @@ import {
 
 export const FavoriteComposers = () => {
   const dispatch = useAppDispatch();
-  React.useEffect(() => {
-    dispatch(essentials());
-    dispatch(popular());
-    dispatch(loadFavoritesFromStorage());
-  }, []);
 
   const favorites = useAppSelector((state) => {
     const { essentialComposers, popularComposers } = state.composerList;
