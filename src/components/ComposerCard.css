@@ -27,21 +27,16 @@
 }
 
 .image-overlay {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
     align-items: center;
     justify-content: center;
     color: var(--light);
-    background: #0000007a;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.image-overlay:hover {
     opacity: 1;
+    transition: opacity 0.5s;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
 
 .plus-icon {
@@ -50,7 +45,7 @@
 }
 
 .plus-icon:hover {
-    color: var(--orange);
+    color: var(--yellow);
 }
 
 p {
