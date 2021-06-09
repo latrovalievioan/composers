@@ -1,11 +1,6 @@
 import React from 'react';
 import './App.css';
-import {
-  essentials,
-  popular,
-  nameSearch,
-  loadFavoritesFromStorage,
-} from './redux/actions';
+import { nameSearch, initApp } from './redux/actions';
 import { useAppDispatch } from './hooks';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { EssentialComposers } from './components/EssentialComposers';
@@ -16,13 +11,11 @@ import { Nav } from './components/Nav';
 function App() {
   const dispatch = useAppDispatch();
 
-  const searchBar = React.useRef<HTMLInputElement>(null);
-
   React.useEffect(() => {
-    dispatch(essentials());
-    dispatch(popular());
-    dispatch(loadFavoritesFromStorage());
+    dispatch(initApp());
   }, []);
+
+  const searchBar = React.useRef<HTMLInputElement>(null);
 
   return (
     <Router>
@@ -36,7 +29,7 @@ function App() {
               dispatch(nameSearch(searchBar.current.value));
           }}
           type="text"
-          placeholder="Find a Composer"
+          placeholder="Find by Name:"
           className="search-bar"
         />
         <Switch>

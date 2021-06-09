@@ -4,8 +4,6 @@ import { useAppSelector, useAppDispatch } from '../hooks';
 import { Composer } from '../types';
 
 export const FavoriteComposers = () => {
-  const dispatch = useAppDispatch();
-
   const favorites = useAppSelector((state) => {
     const { essentialComposers, popularComposers } = state.composerList;
     const allComposers = [...essentialComposers, ...popularComposers];

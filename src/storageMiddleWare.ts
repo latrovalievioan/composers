@@ -1,4 +1,5 @@
 import { Middleware } from 'redux';
+import { loadFavoritesFromStorage, popular, essentials } from './redux/actions';
 
 export const storageMiddleWare: Middleware = (store) => (next) => (action) => {
   next(action);
@@ -19,6 +20,14 @@ export const storageMiddleWare: Middleware = (store) => (next) => (action) => {
       );
       break;
     }
+
+    case 'INIT_APP': {
+      store.dispatch(loadFavoritesFromStorage());
+      store.dispatch(essentials() as any);
+      store.dispatch(popular() as any);
+      break;
+    }
+
     default:
       break;
   }
