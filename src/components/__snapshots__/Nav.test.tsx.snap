@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="navigation"
+>
+  <li
+    className="nav-button"
+  >
+    <a
+      className=""
+      href="/essentials"
+      onClick={[Function]}
+    >
+      Essential Composers
+    </a>
+  </li>
+  <li
+    className="nav-button"
+  >
+    <a
+      className=""
+      href="/popular"
+      onClick={[Function]}
+    >
+      Popular Composers
+    </a>
+  </li>
+  <li
+    className="nav-button"
+  >
+    <a
+      className=""
+      href="/favorites"
+      onClick={[Function]}
+    >
+      Favorite Composers
+    </a>
+  </li>
+</nav>
+`;
