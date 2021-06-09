@@ -41,3 +41,6 @@
   - ~~style grid~~
   - ~~style main page~~
   - ~~style router links~~
+
+- TESTS
+  - write unit tests
