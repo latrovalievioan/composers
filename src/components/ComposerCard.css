@@ -19,11 +19,12 @@
     flex-direction: column;
     color: var(--light);
     padding: 1rem;
+    height: 6rem;
 }
 
 .composer-title {
     margin-bottom: auto;
-    margin-top: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .image-overlay {

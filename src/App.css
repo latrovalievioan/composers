@@ -27,12 +27,11 @@ html {
 .page-title {
     color: var(--orange);
     font-family: Lobster;
-    font-size: 6rem;
-    margin-top: 5rem;
+    font-size: 5.5rem;
     align-self: center;
     text-align: center;
     filter: drop-shadow(0rem 0.3rem 0.2rem var(--brown));
-    margin-bottom: 5rem;
+    margin: 4rem;
 }
 
 .buttons {
