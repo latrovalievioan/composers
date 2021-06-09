@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="composer-card"
+>
+  <img
+    alt=""
+    src="https://i.ytimg.com/vi/cNycdfFEgBc/maxresdefault.jpg"
+  />
+  <div
+    className="composer-info"
+  >
+    <h3
+      className="composer-title"
+    >
+      ts!van-0ff;)
+    </h3>
+    <span>
+      Birth: 
+      yesterday
+    </span>
+    <span>
+      Death: 
+      tomorrow
+    </span>
+    <span>
+      Epoch: 
+      paleolit
+    </span>
+    <div
+      id="mock-button"
+    />
+  </div>
+</div>
+`;

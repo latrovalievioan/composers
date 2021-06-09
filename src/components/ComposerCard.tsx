@@ -3,11 +3,7 @@ import { Composer } from '../types';
 import './ComposerCard.css';
 import { AddRemoveButton } from './AddRemoveButton';
 
-export const ComposerCard = ({
-  composer,
-}: {
-  composer: Composer;
-}): ReactElement => {
+export const ComposerCard = ({ composer }: { composer: Composer }) => {
   return (
     <div className="composer-card">
       <img src={composer.portrait} alt=""></img>
