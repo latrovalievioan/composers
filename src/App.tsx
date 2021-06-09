@@ -14,7 +14,9 @@ import { PopularComposers } from './components/PopularComposers';
 import { FavoriteComposers } from './components/FavoriteComposers';
 function App() {
   const dispatch = useAppDispatch();
+
   const searchBar = React.useRef<HTMLInputElement>(null);
+
   React.useEffect(() => {
     dispatch(essentials());
     dispatch(popular());
@@ -25,16 +27,6 @@ function App() {
     <Router>
       <div className="App">
         <h1 className="page-title">Classical Composers</h1>
-        <input
-          ref={searchBar}
-          onInput={() => {
-            if (searchBar.current)
-              dispatch(nameSearch(searchBar.current.value));
-          }}
-          type="text"
-          placeholder="Find a Composer"
-          className="search-bar"
-        />
         <nav className="navigation">
           <li className="nav-button">
             <Link to="/essentials">Essential Composers</Link>
@@ -46,6 +38,16 @@ function App() {
             <Link to="/favorites">Favorite Composers</Link>
           </li>
         </nav>
+        <input
+          ref={searchBar}
+          onInput={() => {
+            if (searchBar.current)
+              dispatch(nameSearch(searchBar.current.value));
+          }}
+          type="text"
+          placeholder="Find a Composer"
+          className="search-bar"
+        />
         <Switch>
           <Route path="/essentials">
             <EssentialComposers />
