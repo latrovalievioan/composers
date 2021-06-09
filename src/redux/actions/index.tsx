@@ -53,3 +53,12 @@ export const removeFromFavorites = (composerId: string) => {
     payload: composerId,
   };
 };
+
+export const loadFavoritesFromStorage = () => {
+  return {
+    type: 'LOAD_FROM_FAVORITES',
+    payload: new Set(
+      JSON.parse(localStorage.getItem('favoriteComposersIds') || '[]')
+    ),
+  };
+};

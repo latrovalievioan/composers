@@ -13,6 +13,11 @@ export const favoriteComposersReducer = (
       newState.delete(action.payload);
       return newState;
     }
+    case 'LOAD_FROM_FAVORITES': {
+      console.log(action.payload);
+      return action.payload;
+    }
+
     default:
       return state;
   }
