@@ -1,31 +1,25 @@
 import { Middleware } from 'redux';
 
 export const storageMiddleWare: Middleware = (store) => (next) => (action) => {
-  const favoriteComposersIds = store.getState().favoriteComposersIds;
+  next(action);
+  const { favoriteComposersIds } = store.getState();
 
   switch (action.type) {
     case 'ADD_TO_FAVORITES': {
-      const newStorageState = new Set(favoriteComposersIds);
-      newStorageState.add(action.payload);
       localStorage.setItem(
         'favoriteComposersIds',
-        JSON.stringify(Array.from(newStorageState))
+        JSON.stringify(Array.from(favoriteComposersIds))
       );
       break;
     }
     case 'REMOVE_FROM_FAVORITES': {
-      const newStorageState = new Set(favoriteComposersIds);
-      newStorageState.delete(action.payload);
       localStorage.setItem(
         'favoriteComposersIds',
-        JSON.stringify(Array.from(newStorageState))
+        JSON.stringify(Array.from(favoriteComposersIds))
       );
       break;
     }
-
     default:
       break;
   }
-
-  next(action);
 };
