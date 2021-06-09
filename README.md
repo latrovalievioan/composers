@@ -37,7 +37,7 @@
 
 - UI
 
-  - style cards
-  - style grid
-  - style main page
-  - style router links
+  - ~~style cards~~
+  - ~~style grid~~
+  - ~~style main page~~
+  - ~~style router links~~
