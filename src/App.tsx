@@ -35,10 +35,16 @@ function App() {
           placeholder="Find a Composer"
           className="search-bar"
         />
-        <nav className="buttons">
-          <Link to="/essentials">Essential Composers</Link>
-          <Link to="/popular">Popular Composers</Link>
-          <Link to="/favorites">Favorite Composers</Link>
+        <nav className="navigation">
+          <li className="nav-button">
+            <Link to="/essentials">Essential Composers</Link>
+          </li>
+          <li className="nav-button">
+            <Link to="/popular">Popular Composers</Link>
+          </li>
+          <li className="nav-button">
+            <Link to="/favorites">Favorite Composers</Link>
+          </li>
         </nav>
         <Switch>
           <Route path="/essentials">
