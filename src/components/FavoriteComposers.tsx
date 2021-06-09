@@ -2,11 +2,6 @@ import React from 'react';
 import { ComposersGrid } from './ComposersGrid';
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { Composer } from '../types';
-import {
-  loadFavoritesFromStorage,
-  essentials,
-  popular,
-} from '../redux/actions/index';
 
 export const FavoriteComposers = () => {
   const dispatch = useAppDispatch();

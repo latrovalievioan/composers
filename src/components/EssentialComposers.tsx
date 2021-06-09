@@ -2,6 +2,7 @@ import React from 'react';
 import { ComposersGrid } from './ComposersGrid';
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { essentials } from '../redux/actions';
+import { AppLoader } from './AppLoader';
 
 export const EssentialComposers = () => {
   const composers = useAppSelector(
@@ -15,7 +16,7 @@ export const EssentialComposers = () => {
     }
   }, [composers.length]);
 
-  if (composers.length === 0) return <h2>Loading</h2>;
+  if (composers.length === 0) return <AppLoader />;
 
   return <ComposersGrid composers={composers} />;
 };
