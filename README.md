@@ -1,6 +1,9 @@
-# Use yarn start to run the project!
+# Classical Composers
 
-# TODOS:
+- Use yarn to install project dependencies
+- Use yarn start to run the project!
+
+## TODOS:
 
 - STATE
 
@@ -47,5 +50,5 @@
   - ~~style sorting dropdown~~
 
 - TESTS
-  - write snapshot tests
+  - ~~write snapshot tests~~
   - write unit tests
