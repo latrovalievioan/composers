@@ -1,6 +1,7 @@
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import { Composer } from '../types';
+import './SortDropdown.css';
 
 export const SortDropdown = ({
   value,

@@ -43,8 +43,8 @@
   - ~~style grid~~
   - ~~style main page~~
   - ~~style router links~~
-  - style search bar
-  - style sorting dropdown
+  - ~~style search bar~~
+  - ~~style sorting dropdown~~
 
 - TESTS
   - write snapshot tests
