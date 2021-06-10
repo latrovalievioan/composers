@@ -1,8 +1,13 @@
 import React from 'react';
 import './App.css';
-import { nameSearch, initApp } from './redux/actions';
+import { initApp } from './redux/actions';
 import { useAppDispatch } from './hooks';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import { EssentialComposers } from './components/EssentialComposers';
 import { PopularComposers } from './components/PopularComposers';
 import { FavoriteComposers } from './components/FavoriteComposers';
@@ -23,6 +28,9 @@ function App() {
         <h1 className="page-title">Classical Composers</h1>
         <Nav />
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/popular" />
+          </Route>
           <Route path="/essentials">
             <EssentialComposers />
           </Route>
