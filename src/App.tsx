@@ -19,9 +19,6 @@ function App() {
   React.useEffect(() => {
     dispatch(initApp());
   }, []);
-
-  const searchBar = React.useRef<HTMLInputElement>(null);
-
   return (
     <Router>
       <div className="App">

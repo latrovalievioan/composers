@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComposersGrid } from './ComposersGrid';
-import { useAppSelector, useAppDispatch } from '../hooks';
+import { useAppSelector } from '../hooks';
 import { Composer } from '../types';
 
 export const FavoriteComposers = () => {

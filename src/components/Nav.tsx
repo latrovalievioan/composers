@@ -6,8 +6,6 @@ import './Nav.css';
 export const Nav = () => {
   const [currentPage, setCurrentPage] = useState('');
 
-  console.log(currentPage);
-
   return (
     <nav className="navigation">
       {[

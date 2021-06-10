@@ -16,12 +16,3 @@ export const getPopularComposers = async (): Promise<readonly Composer[]> => {
 
   return composers;
 };
-
-export const searchComposer = async (
-  name: string
-): Promise<readonly Composer[]> => {
-  const response = await fetch(`${rootUrl}/composer/list/search/${name}.json`);
-  const data = await response.json();
-  const composers = data.composers;
-  return composers;
-};

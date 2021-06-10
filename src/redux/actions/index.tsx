@@ -1,8 +1,4 @@
-import {
-  getEssentialComposers,
-  getPopularComposers,
-  searchComposer,
-} from '../../api';
+import { getEssentialComposers, getPopularComposers } from '../../api';
 
 import { AppDispatch } from '../store';
 
@@ -20,17 +16,6 @@ export const popular = () => async (dispatch: AppDispatch) => {
     type: 'SET_POPULAR_COMPOSERS',
     payload: composers,
   });
-};
-
-export const nameSearch = (text: string) => async (dispatch: AppDispatch) => {
-  const composers = await searchComposer(text);
-
-  if (typeof composers !== 'string') {
-    dispatch({
-      type: 'SEARCH',
-      payload: composers,
-    });
-  }
 };
 
 export const favorites = () => async (dispatch: AppDispatch) => {
