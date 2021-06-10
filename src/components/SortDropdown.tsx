@@ -12,7 +12,8 @@ export const SortDropdown = ({
 }) => {
   const options: (keyof Composer)[] = ['name', 'birth', 'epoch'];
   return (
-    <div>
+    <div className="dropdown-container">
+      <p>Sort By:</p>
       <Dropdown
         value={value}
         onChange={(option) => onChange(option.value as keyof Composer)}
