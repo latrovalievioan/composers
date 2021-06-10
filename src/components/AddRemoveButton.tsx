@@ -7,7 +7,7 @@ import { addToFavorites, removeFromFavorites } from '../redux/actions';
 export const AddRemoveButton = ({ composer }: { composer: Composer }) => {
   const dispatch = useAppDispatch();
 
-  const isFavorite = useAppSelector((state) =>
+  const isFavorite: boolean = useAppSelector((state) =>
     state.favoriteComposersIds.has(composer.id)
   );
 
