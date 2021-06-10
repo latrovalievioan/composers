@@ -1,6 +1,6 @@
 .composer-card {
     display: flex;
-    width: 18rem;
+    transform: scale(0.85);
     position: relative;
     background: var(--orange);
     border-radius: var(--border-radius);
