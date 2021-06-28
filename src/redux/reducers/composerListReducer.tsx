@@ -1,6 +1,6 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Composer } from '../../types';
-const initialState = {
+export const initialState = {
   essentialComposers: [] as readonly Composer[],
   popularComposers: [] as readonly Composer[],
 };
