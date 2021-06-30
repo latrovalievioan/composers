@@ -14,7 +14,6 @@ export const favoriteComposersReducer = (
       return newState;
     }
     case 'LOAD_FROM_FAVORITES': {
-      console.log(action.payload);
       return action.payload;
     }
 
