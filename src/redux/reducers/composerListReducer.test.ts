@@ -1,6 +1,6 @@
 import { initialState, composerListReducer } from './composerListReducer';
 
-describe('Composer list Reducer testings', () => {
+describe('Composer list Reducer', () => {
   it('initial state should be an object with two empty arrays as values for the keys essentialComposers and popularComposers', () => {
     const state = composerListReducer(initialState, {
       type: '',
