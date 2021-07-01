@@ -31,7 +31,7 @@ describe('Test nav component with shallow', () => {
 });
 
 describe('Test nav component with Full DOM', () => {
-  it.only(`Changes the selected link's className on click`, () => {
+  it(`Changes the selected link's className on click`, () => {
     const nav = mount(
       <BrowserRouter>
         <Nav />
